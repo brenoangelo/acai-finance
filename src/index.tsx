@@ -4,7 +4,6 @@ import { App } from './App';
 
 import { createServer } from 'miragejs'
 
-// começando a testar o mirageJS
 createServer({
   routes() {
     this.namespace = 'api'
@@ -14,9 +13,20 @@ createServer({
         {
           id: 1,
           title: 'Transaction 1',
-          kg: 1,
-          payment: 50,
+          amount: 50,
+          change: 25,
+          weight: 1,
           type: 'deposit',
+          createdAt: new Date()
+        },
+        {
+          id: 2,
+          title: 'Aluguel do ponto',
+          amount: 1600,
+          change: 0,
+          weight: 0,
+          category: 'Aluguel',
+          type: 'spent',
           createdAt: new Date()
         }
       ]

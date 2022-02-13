@@ -19,6 +19,8 @@ export const GlobalStyle = createGlobalStyle`
     --gray-500: #363F5F;
 
     --white: #fff;
+
+    --box-shadow-100: 0px 0px 29px -1px rgba(105,105,105,0.1);
   }
 
   * {

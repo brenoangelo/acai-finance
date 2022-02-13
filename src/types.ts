@@ -1,9 +1,16 @@
 export type Transaction = {
+  id: number;
   title: string;
-  amount: number;
+  deposit?: number;
+  spent?: number;
   type: string;
   category?: string;
-  change: number;
-  weight: number;
+  weight?: number;
   createdAt: string;
+}
+
+export type Filter = {
+  category: string;
+  date: string;
+  search: string;
 }

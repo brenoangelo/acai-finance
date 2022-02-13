@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.table`
   max-width: 1100px;
   width: 100%;
-  margin: 2rem auto 0 auto;
+  margin: 0 auto;
 
   border-spacing: 0 0.5rem;
 

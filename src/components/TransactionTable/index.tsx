@@ -37,16 +37,18 @@ export function TransactionTable({openEditTransaction, filterOpt}: TransactionTa
         
       })
       .filter(item => {
+        const itemTitleLowerCase = item.title.toLowerCase()
         if(filterOpt.search) {
-          return item.title.includes((filterOpt.search).toLowerCase())
+          return itemTitleLowerCase.includes((filterOpt.search).toLowerCase())
         }
         return item
       })
       .filter(item => {
-        console.log(new Date(item.createdAt))
-        console.log(new Date(filterOpt.date))
+        const dateFilter = Date.parse(filterOpt.date)
+        const dateItem = Date.parse(item.createdAt)
+
         if(filterOpt.date.trim()) {
-          return new Date(item.createdAt) === new Date(filterOpt.date)
+          return 
         }
         return item
       })
